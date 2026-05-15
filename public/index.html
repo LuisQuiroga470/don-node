@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido </title>
+</head>
+<body>
+    
+<h1>PIZERRIA DON NODE</h1>
+<br><br>
+<h2>PEDIDO:</h2>
+
+<form action="/pedidos" method="post">
+
+    <label for="nombre">NOMBRE:</label>
+    <input type="text" id="nombre" name="nombre" required >
+<br><br>
+    <label for="tamaño">TAMAÑO DE PIZZA:</label>
+<br>
+
+<label for="tamaño">CHICA</label>
+    <input type="radio" id="chica" name="tamaño" value="chica">
+
+    <label for="tamaño">MEDIANO</label>
+    <input type="radio" id="mediana" name="tamaño" value="mediana" >
+
+
+    <label for="tamaño">GRANDE</label>
+<input type="radio" id="grande" name="tamaño" value="grande">
+<br>
+<br>
+<label for="ingredientes">ELIGA SUS INGREDIENTES:</label>
+<br>
+<label for="jamon">Jamon:</label>
+<input type="checkbox" name="jamon" id="jamon" value="jamon">
+<br>
+<label for="">Queso extra:</label>
+<input type="checkbox" name="quesoextra" id="quesoextra" value="quesoextra">
+<br>
+<label for="jamon">Champiñones:</label>
+<input type="checkbox" name="champiñones" id="champiñones" value="champiñones">
+<br>
+<label for="jamon">aceitunas:</label>
+<input type="checkbox" name="aceitunas" id="aceitunas" value="aceitunas">
+<br>
+<label for="jamon">cebolla:</label>
+<input type="checkbox" name="cebolla" id="cebolla" value="cebolla">
+<br>
+<label for="jamon">tocino:</label>
+<input type="checkbox" name="tocino" id="tocino" value="tocino">
+<br>
+<label for="cantidad">Cantidad de pizzas (minimo 1):</label>
+<input type="number" id="cantidad" name="cantidad" min="1" >
+<br>    <br>
+<button type="submit">REGISTRAR PEDIDO</button>
+</form>
+
+</body>
+</html>
