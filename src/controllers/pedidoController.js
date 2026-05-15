@@ -14,7 +14,7 @@ function registrarPedidos(req, res) {
         cantidad
     } = req.body;
 
-    // PRECIOS SEGÚN TAMAÑO
+    
     let precioBase = 0;
     let valorExtra = 0;
 
@@ -33,7 +33,7 @@ function registrarPedidos(req, res) {
         valorExtra = 1200;
     }
 
-    // INGREDIENTES
+    
     const ingredientes = [];
 
     if (jamon) ingredientes.push("Jamón");
@@ -43,25 +43,25 @@ function registrarPedidos(req, res) {
     if (cebolla) ingredientes.push("Cebolla");
     if (tocino) ingredientes.push("Tocino");
 
-    // CONTAR INGREDIENTES
+    
     const cantidadIngredientes = ingredientes.length;
 
-    // INGREDIENTES EXTRA
+    
     let ingredientesExtra = 0;
 
     if (cantidadIngredientes > 3) {
         ingredientesExtra = cantidadIngredientes - 3;
     }
 
-    // PRECIO UNITARIO
+    
     const precioUnitario =
         precioBase + (ingredientesExtra * valorExtra);
 
-    // TOTAL
+    
     const total =
         precioUnitario * Number(cantidad);
 
-    // OBJETO PEDIDO
+    
     const pedido = {
         nombre,
         tamaño,
@@ -71,10 +71,10 @@ function registrarPedidos(req, res) {
         total
     };
 
-    // GUARDAR
+    
     pedidoModel.guardar(pedido);
 
-    // REDIRECCIONAR
+    
     res.redirect('/pedidos/lista');
 }
 
